@@ -15,8 +15,18 @@ namespace Parcial_1_Francisco_Argueta
     {
         List<estudiante> estu = new List<estudiante>();
         List<libros> li = new List<libros>();
+        List<prestamos> pre = new List<prestamos>();
         Boolean h = false;
-        int c= 0;
+        Boolean l = false;
+        int ls = 0;
+        Boolean es = false;
+        int et = 0;
+        Boolean p = false;
+        int pd = 0;
+        Boolean p1 = false;
+        int pd1 = 0;
+        Boolean p2 = false;
+        int pd2 = 0;
         public Form1()
         {
             InitializeComponent();
@@ -62,8 +72,7 @@ namespace Parcial_1_Francisco_Argueta
                 write.WriteLine(d.Codigo);
                 write.WriteLine(d.Tiulo);
                 write.WriteLine(d.Autor);
-                write.WriteLine(d.FechaN);
-                write.WriteLine(d.FechaS);
+               
                 write.WriteLine(d.Año);
 
             }
@@ -81,13 +90,42 @@ namespace Parcial_1_Francisco_Argueta
                 a.Codigo = reader.ReadLine();
                 a.Tiulo = reader.ReadLine();
                 a.Autor = reader.ReadLine();
-                a.FechaN = reader.ReadLine();
-                a.FechaS = reader.ReadLine();
                 a.Año = reader.ReadLine();
                 li.Add(a);
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = estu;
+                dataGridView1.DataSource = li;
                 dataGridView1.Refresh();
+            }
+            reader.Close();
+        }
+        void escribirPrestamo()
+        {
+            FileStream stream = new FileStream("prestamos.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter write = new StreamWriter(stream);
+            foreach (var d in pre)
+            {
+                write.WriteLine(d.Nom);
+                write.WriteLine(d.Libro);
+                write.WriteLine(d.FechN);
+                write.WriteLine(d.FechS);
+            }
+            write.Close();
+        }
+
+        void leerPrestamo()
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            string fileName = "prestamos.txt";
+            FileStream st = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(st);
+            while (reader.Peek() > -1)
+            {
+                prestamos d = new prestamos();
+                d.Nom = reader.ReadLine();
+                d.Libro = reader.ReadLine();
+                d.FechN = reader.ReadLine();
+                d.FechS = reader.ReadLine();
+                pre.Add(d);
             }
             reader.Close();
         }
@@ -99,6 +137,53 @@ namespace Parcial_1_Francisco_Argueta
             a.Direc = textBox3.Text;
             
         }
+      
+
+        void repetidosLibros()
+        {
+            while (l == false && ls < li.Count)
+            {
+                if (li[ls].Codigo.CompareTo(textBox4.Text) == 0)
+                {
+                    l = true;
+                }
+                else
+                {
+                    ls++;
+                }
+            }
+        }
+
+        void repetidosPrestamos()
+        {
+            while (p == false && pd < pre.Count)
+            {
+                if (pre[pd].Nom.CompareTo(textBox9.Text) == 0)
+                {
+                    p = true;
+                }
+                else
+                {
+                    pd++;
+                }
+            }
+        }
+        void repetidosEstudiantes()
+        {
+            while (es == false && et < estu.Count)
+            {
+                if (estu[et].Carnet1.CompareTo(textBox1.Text) == 0)
+                {
+                    es = true;
+                }
+                else
+                {
+                    et++;
+                }
+            }
+        }
+
+
 
 
 
@@ -122,8 +207,7 @@ namespace Parcial_1_Francisco_Argueta
                     s.Tiulo = textBox5.Text;
                     s.Autor = textBox6.Text;
                     s.Año = textBox7.Text;
-                    s.FechaN = dateTimePicker1.Value.ToString();
-                    s.FechaS = dateTimePicker2.Value.ToString();
+                    
                     f.Carnet1 = textBox1.Text;
                     f.Nombre = textBox2.Text;
                     f.Direc = textBox3.Text;
@@ -147,7 +231,7 @@ namespace Parcial_1_Francisco_Argueta
                 MessageBox.Show("Debe de llenar todos los campos");
             }
             h = false;
-            c = 0;
+           
 
         }
 
@@ -155,6 +239,67 @@ namespace Parcial_1_Francisco_Argueta
         {
             leerestudiantes();
             leerlibro();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox8.Text) && !string.IsNullOrEmpty(textBox9.Text))
+            {
+                prestamos d = new prestamos();
+                
+                d.Nom = textBox9.Text;
+               
+                leerlibro();
+                if (p1)
+                {
+                    d.Libro = textBox8.Text;
+                    
+                    leerestudiantes();
+                    if (p2)
+                    {
+                        repetidosPrestamos();
+                        if (p)
+                        {
+                            MessageBox.Show("El libro con el código introducido ya se encuentra prestado");
+                            textBox8.Clear();
+                            p = false;
+                            pd = 0;
+                        }
+                        else
+                        {
+                            d.FechN = dateTimePicker1.Value.ToString();
+                            d.FechS = dateTimePicker2.Value.ToString();
+                            
+                            pre.Add(d);
+                            escribirPrestamo();
+                            
+                           
+                            pd = 0;
+                            textBox8.Clear();
+                            textBox9.Clear();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El estudiante introducido no se encuentra en la base de datos");
+                        textBox8.Clear();
+                        p2 = false;
+                        pd2 = 0;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El libro introducido no se encuentra en la base de datos");
+                    textBox9.Clear();
+                    p1 = false;
+                    pd1 = 0;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+            }
+
         }
     }
     }

@@ -54,6 +54,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="libros.cs" />
+    <Compile Include="prest.cs" />
+    <Compile Include="prestamos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -84,6 +86,7 @@
   <ItemGroup>
     <Content Include="estudiante.txt" />
     <Content Include="libros.txt" />
+    <Content Include="prestamos.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

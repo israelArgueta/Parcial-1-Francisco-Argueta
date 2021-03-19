@@ -47,19 +47,22 @@ namespace Parcial_1_Francisco_Argueta
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 321);
+            this.button1.Location = new System.Drawing.Point(632, 157);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 34);
             this.button1.TabIndex = 0;
@@ -170,7 +173,7 @@ namespace Parcial_1_Francisco_Argueta
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(318, 284);
+            this.label9.Location = new System.Drawing.Point(318, 211);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 17);
             this.label9.TabIndex = 13;
@@ -192,7 +195,7 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(463, 279);
+            this.textBox7.Location = new System.Drawing.Point(463, 208);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 16;
@@ -200,26 +203,17 @@ namespace Parcial_1_Francisco_Argueta
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(783, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(746, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(365, 218);
             this.dataGridView1.TabIndex = 17;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(513, 369);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(180, 180);
-            this.listBox1.TabIndex = 18;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(510, 330);
+            this.label10.Location = new System.Drawing.Point(108, 333);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 17);
             this.label10.TabIndex = 19;
@@ -227,14 +221,14 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(429, 207);
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 430);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(259, 22);
             this.dateTimePicker1.TabIndex = 20;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(429, 246);
+            this.dateTimePicker2.Location = new System.Drawing.Point(141, 495);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(259, 22);
             this.dateTimePicker2.TabIndex = 21;
@@ -242,7 +236,7 @@ namespace Parcial_1_Francisco_Argueta
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(284, 212);
+            this.label11.Location = new System.Drawing.Point(22, 435);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 17);
             this.label11.TabIndex = 22;
@@ -251,7 +245,7 @@ namespace Parcial_1_Francisco_Argueta
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(284, 252);
+            this.label12.Location = new System.Drawing.Point(12, 500);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 17);
             this.label12.TabIndex = 23;
@@ -259,25 +253,60 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(180, 495);
+            this.button2.Location = new System.Drawing.Point(451, 426);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(77, 35);
             this.button2.TabIndex = 24;
             this.button2.Text = "prestamos";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 391);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 17);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "nombre del libro";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(65, 359);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 17);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Alumno";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(135, 359);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 27;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(139, 391);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 28;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 573);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -325,13 +354,16 @@ namespace Parcial_1_Francisco_Argueta
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
 
