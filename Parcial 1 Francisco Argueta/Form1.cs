@@ -144,6 +144,12 @@ namespace Parcial_1_Francisco_Argueta
             c = 0;
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            leerestudiantes();
+            leerlibro();
+        }
     }
     }
 

@@ -52,7 +52,7 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 330);
+            this.button1.Location = new System.Drawing.Point(85, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 34);
             this.button1.TabIndex = 0;
@@ -193,11 +193,11 @@ namespace Parcial_1_Francisco_Argueta
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(663, 78);
+            this.dataGridView1.Location = new System.Drawing.Point(634, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(346, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(501, 286);
             this.dataGridView1.TabIndex = 17;
             // 
             // Form1
@@ -225,6 +225,7 @@ namespace Parcial_1_Francisco_Argueta
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
