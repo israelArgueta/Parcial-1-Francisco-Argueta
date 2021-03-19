@@ -47,12 +47,19 @@ namespace Parcial_1_Francisco_Argueta
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(85, 330);
+            this.button1.Location = new System.Drawing.Point(135, 321);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 34);
             this.button1.TabIndex = 0;
@@ -119,7 +126,7 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(463, 109);
+            this.textBox4.Location = new System.Drawing.Point(463, 73);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 8;
@@ -136,7 +143,7 @@ namespace Parcial_1_Francisco_Argueta
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(392, 112);
+            this.label6.Location = new System.Drawing.Point(396, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 17);
             this.label6.TabIndex = 10;
@@ -145,7 +152,7 @@ namespace Parcial_1_Francisco_Argueta
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(396, 162);
+            this.label7.Location = new System.Drawing.Point(408, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 17);
             this.label7.TabIndex = 11;
@@ -154,7 +161,7 @@ namespace Parcial_1_Francisco_Argueta
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(392, 211);
+            this.label8.Location = new System.Drawing.Point(404, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 12;
@@ -163,7 +170,7 @@ namespace Parcial_1_Francisco_Argueta
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(329, 259);
+            this.label9.Location = new System.Drawing.Point(318, 284);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 17);
             this.label9.TabIndex = 13;
@@ -171,21 +178,21 @@ namespace Parcial_1_Francisco_Argueta
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(463, 159);
+            this.textBox5.Location = new System.Drawing.Point(463, 123);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 14;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(463, 206);
+            this.textBox6.Location = new System.Drawing.Point(463, 169);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 15;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(463, 254);
+            this.textBox7.Location = new System.Drawing.Point(463, 279);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 16;
@@ -193,18 +200,84 @@ namespace Parcial_1_Francisco_Argueta
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(634, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(783, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(501, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(365, 218);
             this.dataGridView1.TabIndex = 17;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(513, 369);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(180, 180);
+            this.listBox1.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(510, 330);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 17);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "listado de prestamos";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(429, 207);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(259, 22);
+            this.dateTimePicker1.TabIndex = 20;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(429, 246);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(259, 22);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(284, 212);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 17);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "fecha prestamos";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(284, 252);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(116, 17);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "fecha de entrega";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(180, 495);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "prestamos";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 524);
+            this.ClientSize = new System.Drawing.Size(1189, 573);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -252,6 +325,13 @@ namespace Parcial_1_Francisco_Argueta
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button2;
     }
 }
 

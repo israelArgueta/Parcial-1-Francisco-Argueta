@@ -62,6 +62,8 @@ namespace Parcial_1_Francisco_Argueta
                 write.WriteLine(d.Codigo);
                 write.WriteLine(d.Tiulo);
                 write.WriteLine(d.Autor);
+                write.WriteLine(d.FechaN);
+                write.WriteLine(d.FechaS);
                 write.WriteLine(d.Año);
 
             }
@@ -79,6 +81,8 @@ namespace Parcial_1_Francisco_Argueta
                 a.Codigo = reader.ReadLine();
                 a.Tiulo = reader.ReadLine();
                 a.Autor = reader.ReadLine();
+                a.FechaN = reader.ReadLine();
+                a.FechaS = reader.ReadLine();
                 a.Año = reader.ReadLine();
                 li.Add(a);
                 dataGridView1.DataSource = null;
@@ -118,6 +122,8 @@ namespace Parcial_1_Francisco_Argueta
                     s.Tiulo = textBox5.Text;
                     s.Autor = textBox6.Text;
                     s.Año = textBox7.Text;
+                    s.FechaN = dateTimePicker1.Value.ToString();
+                    s.FechaS = dateTimePicker2.Value.ToString();
                     f.Carnet1 = textBox1.Text;
                     f.Nombre = textBox2.Text;
                     f.Direc = textBox3.Text;
